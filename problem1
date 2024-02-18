@@ -1,0 +1,9 @@
+require 'csv'
+
+csv_file = 'data.csv'
+csv_data = CSV.read(csv_file, headers: true)
+
+csv_hashes = csv_data.map(&:to_h)
+
+puts csv_hashes
+
